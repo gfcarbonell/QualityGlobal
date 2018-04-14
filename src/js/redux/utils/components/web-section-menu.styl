@@ -1,0 +1,22 @@
+.section-menu
+    display flex
+    flex-direction column
+    &-item
+        width 100%
+        &-content
+            >img
+                width 250px
+                height 250px
+
+@media (min-width: 576px)
+    .section-menu
+        flex-direction row 
+        flex-wrap wrap
+        justify-content center
+        &-item 
+            width 50%
+
+@media (min-width: 992px)
+    .section-menu
+        &-item 
+            width 33.3%

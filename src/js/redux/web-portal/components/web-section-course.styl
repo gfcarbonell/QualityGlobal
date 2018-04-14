@@ -1,0 +1,80 @@
+#panel_course
+    margin 0
+.panel 
+    &-left
+    &-right 
+        width 100%
+        height 500px
+        overflow-y auto
+        margin 1em 0
+    &-left
+        &-banner 
+            width 100%
+            margin 1.5em 0
+            
+            >img 
+                margin 0 auto
+                display block
+                height 120px 
+                width 120px
+                
+        &-items     
+            margin 0       
+            &-item 
+                &-header 
+                    padding .5em 0
+                    background white
+                    display flex 
+                    justify-content center 
+                    align-items center
+                    &-logo
+                        border-right 2px solid black
+                        border-left 2px solid black
+                        border-radius .5em
+                        padding 0 .5em
+                        >img
+
+                            display block 
+                            margin 0 auto
+                            width 35px 
+                            height 35px
+                    
+                            
+                        
+                          
+                            
+                       
+
+.bank
+    position relative
+    &-accounts
+        &-items
+            width 100%
+            border 2px solid black  
+            border-radius .5em 
+            padding .5em
+            &-wrapper
+                width 100%
+                &-item
+                    display flex 
+                    justify-content space-between
+                    align-items center
+                    flex-direction column
+                    padding .5em 
+                    border-bottom 1px solid gray
+                    &-key 
+                        display block
+                        width 100%
+                    &-value 
+                        padding-left 2.4em
+                        display flex
+                        width 100%
+                        flex-direction column
+
+@media (min-width: 576px)
+    #course
+        .course-item
+            >figure 
+                >img 
+                    width 150px
+                    height 150px

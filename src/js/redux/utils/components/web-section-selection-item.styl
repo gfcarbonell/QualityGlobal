@@ -1,0 +1,40 @@
+.post
+    &-modal
+        display block
+        width 100%
+        height 320px
+        transition .3s
+        border 1px solid transparent
+        overflow hidden
+        &:hover
+            border 1px solid white
+            box-shadow 2px 2px 10px white
+        >figure 
+            width 100%
+            height 100%
+            position relative
+            transition .3s
+            z-index 100
+            &:hover
+                >figcaption
+                        bottom 0%
+            >div
+                overflow hidden
+                width 100%
+                height 100%
+                transition .3s
+                &:hover
+                    transform scale(1.2)
+                >img 
+                    transition .3s
+                    width 100%
+                    height 100%
+            >figcaption
+                border-top 1px solid white
+                transition .3s
+                display block
+                position absolute
+                width 100%
+                background rgba(black, .3)
+                bottom -25%
+

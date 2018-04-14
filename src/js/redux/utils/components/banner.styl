@@ -1,0 +1,35 @@
+.banner
+    >ul 
+        margin .5em
+    &-wrapper
+        >img
+            width 100%
+            height 250px
+            min-height 200px
+    >figcaption 
+        >p
+            border-radius .5em
+            max-height 200px
+            overflow-y auto
+            border 1px solid gray
+            background white
+            box-shadow 1px 1px 6px black
+            padding .5em
+            margin 0 .5em
+            text-align justify
+@media (min-width: 576px)
+    .banner
+        width 80%
+        margin 0 auto
+        margin-top 40px 
+        &-wrapper
+            display flex
+            justify-content center
+            >img
+                box-shadow 1px 1px 6px black
+                border-radius .3em
+                width 87%
+                height 350px
+@media (min-width: 1200px)
+    .banner
+        width 65%
