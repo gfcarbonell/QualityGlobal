@@ -1,6 +1,6 @@
 import React from "react";
-import $ from "jquery";
-import "materialize-css";
+import * as $ from "jquery";
+import 'materialize-css';
 import Zoom from "react-reveal/Zoom";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
@@ -9,7 +9,7 @@ import Fade from "react-reveal/Fade";
 class WebFooter extends React.Component {
 
   componentDidMount(){
-      $(".materialboxed").materialbox();
+    $(".materialboxed").materialbox();
   }
 
   render (){

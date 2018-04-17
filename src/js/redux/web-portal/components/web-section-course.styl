@@ -1,12 +1,21 @@
 #panel_course
     margin 0
+
+
 .panel 
+    display flex 
+    justify-content center 
+    
+    flex-direction column
     &-left
     &-right 
         width 100%
-        height 500px
         overflow-y auto
-        margin 1em 0
+        margin 1em auto
+    &-right 
+        &-title 
+            >h3 
+                font-size 1.3em
     &-left
         &-banner 
             width 100%
@@ -17,64 +26,139 @@
                 display block
                 height 120px 
                 width 120px
+                transition 1s 
+                
+                &:hover 
+                    transform rotateX(0) rotateY(360deg) rotateZ(0)      
                 
         &-items     
-            margin 0       
+            margin 0  
+            box-shadow 1px 1px 6px     
             &-item 
                 &-header 
                     padding .5em 0
-                    background white
+                    background radial-gradient(transparent , white); 
                     display flex 
                     justify-content center 
                     align-items center
+                    transition .3s
+                    &:hover
+                        background rgba(gold, .4)
+                        .panel-left-items-item-header-logo
+                            background radial-gradient(360deg, white, rgba(gray, .5)); 
+                            >img 
+                                transform rotateY(360deg) scale(1.1)
+                                z-index 10000
                     &-logo
                         border-right 2px solid black
                         border-left 2px solid black
                         border-radius .5em
                         padding 0 .5em
+                        transition .3s
+                        z-index -10
                         >img
-
+                            z-index 10000
                             display block 
                             margin 0 auto
-                            width 35px 
-                            height 35px
-                    
-                            
-                        
-                          
-                            
-                       
+                            width 60px 
+                            height 50px
+                            transition .7s
+                                   
 
 .bank
-    position relative
-    &-accounts
-        &-items
-            width 100%
-            border 2px solid black  
-            border-radius .5em 
-            padding .5em
-            &-wrapper
-                width 100%
-                &-item
-                    display flex 
-                    justify-content space-between
-                    align-items center
-                    flex-direction column
-                    padding .5em 
-                    border-bottom 1px solid gray
-                    &-key 
-                        display block
-                        width 100%
-                    &-value 
-                        padding-left 2.4em
-                        display flex
-                        width 100%
-                        flex-direction column
+    padding 1em
+    width 100%
+    &-logo 
+        >img 
+            width 60px 
+            height 60px
+            display block 
+            margin 0 auto
+            transition 1s 
+            &:hover 
+                transform rotateX(0) rotateY(360deg) rotateZ(0)      
+    &-account
+        width 100%
+        padding-top .5em 
+        padding-bottom .5em 
+        background transparent 
+        margin 0 auto
+        &-item
+            border-bottom 1px solid gray
+            padding .5em 0
+            &-key 
+                font-weight bolder
+        
+
+.tabs .tab a{
+    color:#7cb342;
+    text-shadow 1px 1px 6px white
+    transition: .3s
+}
+.tabs .tab a:hover,.tabs .tab a.active {
+	background-color:transparent;
+	color:white;
+    text-shadow: 1px 1px 7px black;
+     background: rgba(gold, .4);
+     border-bottom:1px solid black;
+}
+.tabs .tab.disabled a,.tabs .tab.disabled a:hover {
+	color:gold;	
+     background: rgba(gold, .4);
+   
+}
+.tabs .indicator {
+	background-color:gold;
+}
 
 @media (min-width: 576px)
+    .bank
+        display flex 
+        
+        align-items center
+        &-logo 
+            width 200px
+            >img 
+                width 100px 
+                height 100px
+                
+        &-account
+            width 300px
+            &-item
+                margin 0 auto
+                
     #course
         .course-item
             >figure 
                 >img 
                     width 150px
                     height 150px
+    .panel 
+        flex-direction row
+        &-right 
+            &-title 
+                >h3 
+                    font-size 1.8em
+        &-left
+            border-right 1px solid gray
+            &-banner 
+                >img 
+                    height 150px 
+                    width 150px    
+            &-items     
+                &-item 
+                    &-header 
+                        &-logo
+                            >img
+                                width 65px 
+                                height 55px
+
+@media (min-width: 1000px)
+    .bank
+        &-logo 
+            width 50%
+            >img 
+                width 150px
+                height 150px
+        &-account
+            width 50%

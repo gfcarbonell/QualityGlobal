@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import $ from 'jquery';
 import 'materialize-css';
 import Bounce from 'react-reveal/Bounce';
 import Zoom from 'react-reveal/Zoom';
@@ -7,9 +8,14 @@ import Slide from 'react-reveal/Slide';
 
 
 class Banner extends React.Component {
+    componentDidMount(){
+        $('.collapsible').collapsible();
+    }
+
     render (){
         let banner = (this.props.data.banner)? this.props.data.banner:this.propTypes.banner;
-
+        let title = (this.props.data.title)? this.props.data.title: "cargando...";
+        let description = (this.props.data.description)? this.props.data.description: "cargando...";
         return (  
             <div>
                 <figure className='banner'>
@@ -21,12 +27,12 @@ class Banner extends React.Component {
                     <figcaption>
                         <Zoom>
                             <h5 className="center-align white-text text-shadow-black font-weight-bold">
-                                {this.props.data.title}
+                                {title}
                             </h5>
                         </Zoom>
                         <Zoom left>
                             <p>
-                                {this.props.data.description}
+                                {description}
                             </p>
                         </Zoom>
                     </figcaption>

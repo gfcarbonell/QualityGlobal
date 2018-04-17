@@ -9,6 +9,335 @@ import {WebSectionPhilosophy} from './web-section-philosophy';
 import {WebSectionService} from './web-section-service';
 import {WebFooter} from './web-footer'
 
+const courses = [
+    {
+        id:1,
+        name: 'Sistema Integral de Administración Financiera',
+        initial: 'S.I.A.F.',
+        logo:{
+            src:require(`./../../../../media/images/png/SIAF-1.png`),
+            alt: 'S.I.A.F.'
+        },
+        modules: [
+            {
+                id:1,
+                name:'Módulo Administrativo',
+                url:'/cursos/modulo-administrativo',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:2,
+                name:'Módulo Presupuestal',
+                url:'/cursos/modulo-presupuestal',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:3,
+                name:'Módulo Contable',
+                url:'/cursos/modulo-contable',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:4,
+                name:'Módulo Tesorería',
+                url:'/cursos/modulo-tesoreria',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:5,
+                name:'Módulo Control de Planilla',
+                url:'/cursos/modulo-control-planilla',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id:2,
+        name: 'Sistema Integrado de Gestión Administrativa',
+        initial: 'S.I.G.A.',
+        logo:{
+            src:require(`./../../../../media/images/png/SIGA-1.png`),
+            alt: 'S.I.A.F.'
+        },
+        modules: [
+            {
+                id:1,
+                name:'Módulo Logística',
+                url:'/cursos/modulo-logistica',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:2,
+                name:'Módulo Patrimonio',
+                url:'/cursos/modulo-patrimonio',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:3,
+                name:'Módulo Presupuesto por Resultados',
+                url:'/cursos/modulo-presupuesto-resultados',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:4,
+                name:'Módulo Bienes Corrientes',
+                url:'/cursos/modulo-bienes-corrientes',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id:3,
+        name: 'Sistema Electrónico de Contrataciones del Estado',
+        initial: 'S.E.A.C.E.',
+        logo:{
+            src:require(`./../../../../media/images/png/SEACE-1.png`),
+            alt: 'S.E.A.C.E.'
+        },
+        modules: [
+            {
+                id:1,
+                name:'Módulo Logística',
+                url:'/cursos/modulo-logistica',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:2,
+                name:'Módulo Patrimonio',
+                url:'/cursos/modulo-patrimonio',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:3,
+                name:'Módulo Presupuesto por Resultados',
+                url:'/cursos/modulo-presupuesto-resultados',
+                themes: [
+                    {
+                        id:1,
+                        theme: 'Tema 1'
+                    },
+                    {
+                        id:2,
+                        theme: 'Tema 2'
+                    },{
+                        id:3,
+                        theme: 'Tema 3'
+                    },{
+                        id:4,
+                        theme: 'Tema 4'
+                    },{
+                        id:5,
+                        theme: 'Tema 5'
+                    },
+                ]
+            },
+            {
+                id:4,
+                name:'Módulo Bienes Corrientes',
+                url:'/cursos/modulo-bienes-corrientes',
+                
+            }
+        ]
+    }
+];
 
 const sliders = [
     {
@@ -630,7 +959,6 @@ class WebPortal extends React.Component {
         return (
             <div>
                 <WebHeader sliders={sliders} head={rootHeader} />
-
                 <WebNav style={{'background':'#7cb342'}}/> 
                 <section>
                     <main>
@@ -638,7 +966,7 @@ class WebPortal extends React.Component {
                             <Route exact path="/" component={() => <WebSectionHome head={rootHeader} images={imagesSectionMenu} items={servicesSectionMenu} style={{'background':'#7cb342'}}/>} />
                             <Route path="/servicios" component={() => <WebSectionService head={rootHeader} images={imagesSectionMenu} items={servicesSectionMenu} style={{'background':'#7cb342'}} />} />
                             <Route path="/especializaciones" component={()=><li />} />
-                            <Route path="/cursos" component={()=> <WebSectionCourse />} />
+                            <Route path="/cursos" component={()=> <WebSectionCourse courses={courses}/>} />
                             <Route path="/quienes-somos" component={()=><WebSectionPhilosophy />} />
                             <Route path="/contactanos" component={()=><WebSectionContact />} />
                         </Switch>
