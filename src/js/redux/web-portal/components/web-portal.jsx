@@ -4,11 +4,15 @@ import {WebNav} from './web-nav';
 import {WebHeader} from './web-header';
 import {WebSectionHome} from './web-section-home';
 import {WebSectionContact} from './web-section-contact';
-import {WebSectionCourse} from './web-section-course';
+//import {WebSectionCourse} from './web-section-course';
 import {WebSectionPhilosophy} from './web-section-philosophy';
 import {WebSectionService} from './web-section-service';
 import {WebFooter} from './web-footer'
-
+import {Chat} from '../../utils/components/chat';
+import {EmbedFansPage} from '../../utils/components/embed-fans-page';
+import {WebAsideMenu} from '../../utils/components/web-aside-menu';
+import {WebConstruction} from '../../utils/components/web-construction';
+/*
 const courses = [
     {
         id:1,
@@ -338,7 +342,7 @@ const courses = [
         ]
     }
 ];
-
+*/
 const sliders = [
     {
         id:1,
@@ -953,6 +957,102 @@ const servicesSectionMenu = [
     }
 ]
 
+const socialNetwork = [
+        {
+            id:1,
+            name:"Facebook",
+            url:"https://www.facebook.com/qualityAsesoresyconsultores/",
+            img:{
+                src:require(`./../../../../media/images/svg/Facebook.svg`),
+                alt: this.name
+                }
+        },
+        {
+            id:2,
+            name:"Instagram",
+            url:"#Instagram",
+            img:{
+                src:require(`./../../../../media/images/svg/Instagram.svg`),
+                alt:this.name
+            }
+        },
+        {
+            id:3,
+            name:"Twitter",
+            url:"#Twitter",
+            img:{
+                src:require(`./../../../../media/images/svg/Twitter.svg`),
+                alt:this.name
+            }
+        },
+        {
+            id:4,
+            name:"WhatsApp",
+            url:"#WhatsApp",
+            img:{
+                src:require(`./../../../../media/images/svg/WhatsApp.svg`),
+                alt:"WhatsApp"
+            }
+        },
+        {
+            id:5,
+            name:"Pinterest",
+            url:"#Pinterest",
+            img:{
+                src:require(`./../../../../media/images/svg/Pinterest.svg`),
+                alt:"Pinterest"
+            }
+        },
+        {
+            id:6,
+            name:"Skype",
+            url:"#Skype",
+            img:{
+                src:require(`./../../../../media/images/svg/Skype.svg`),
+                alt:"Skype"
+            }
+        },
+        {
+            id:7,
+            name:"Vimeo",
+            url:"#Vimeo",
+            img:{
+                src:require(`./../../../../media/images/svg/Vimeo.svg`),
+                alt:"Vimeo"
+            }
+        },
+        {
+            id:8,
+            name:"Youtube",
+            url:"#Youtube",
+            img:{
+                src:require(`./../../../../media/images/svg/Youtube.svg`),
+                alt:"Youtube"
+            }
+        }
+]
+
+const systemBar = [
+    {
+        id:1,
+        name:"E-mail | Company",
+        url:"http://webmail.qygconsultores.com/Mondo/lang/sys/login.aspx",
+        img:{
+            src:require(`./../../../../media/images/png/EMail-Green-1.png`),
+            alt:this.name
+        },
+    },
+    {
+        id:1,
+        name:"System | Company",
+        url:"#",
+        img:{
+            src:require(`./../../../../media/images/png/Control-Panel-1.png`),
+            alt:this.name
+        },
+    }
+]
+
 class WebPortal extends React.Component {
     
     render (){
@@ -960,13 +1060,17 @@ class WebPortal extends React.Component {
             <div>
                 <WebHeader sliders={sliders} head={rootHeader} />
                 <WebNav style={{'background':'#7cb342'}}/> 
+                <WebAsideMenu items={socialNetwork} position="left-bar" style={{"borderTop":"1px solid skyBlue", "borderRight":"1px solid skyBlue", "borderBottom":"1px solid skyBlue", "borderRadius": "0 .5em .5em 0", "top":"25vh", "height":"350px"}} />
+                <WebAsideMenu items={systemBar} position="right-bar" style={{"borderTop":"1px solid skyBlue", "borderLeft":"1px solid skyBlue", "borderBottom":"1px solid skyBlue", "borderRadius": ".5em 0 0 .5em", "top":"25vh", "height":"auto"}} />
+                <EmbedFansPage />
+                <Chat />
                 <section>
                     <main>
                         <Switch>
                             <Route exact path="/" component={() => <WebSectionHome head={rootHeader} images={imagesSectionMenu} items={servicesSectionMenu} style={{'background':'#7cb342'}}/>} />
                             <Route path="/servicios" component={() => <WebSectionService head={rootHeader} images={imagesSectionMenu} items={servicesSectionMenu} style={{'background':'#7cb342'}} />} />
                             <Route path="/especializaciones" component={()=><li />} />
-                            <Route path="/cursos" component={()=> <WebSectionCourse courses={courses}/>} />
+                            <Route path="/cursos" component={()=> <WebConstruction />} />
                             <Route path="/quienes-somos" component={()=><WebSectionPhilosophy />} />
                             <Route path="/contactanos" component={()=><WebSectionContact />} />
                         </Switch>

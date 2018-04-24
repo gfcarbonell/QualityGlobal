@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "gmail-send": "^1.2.14",
     "jquery": "^3.3.1",
     "materialize-css": "^0.100.2",
     "react": "^16.3.0",

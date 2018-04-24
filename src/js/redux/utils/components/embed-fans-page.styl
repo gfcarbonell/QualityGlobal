@@ -1,0 +1,52 @@
+#wrapper_fans_page
+    z-index 1000000
+    top 60vh
+    position fixed 
+    height 800px
+    right -397px
+    transition .3s
+    &:hover 
+        right -340px
+
+.fans-page
+    display flex 
+    justify-content center 
+    &-logo 
+        border-top 1px solid skyblue 
+        border-bottom 1px solid skyblue 
+        border-left 1px solid skyblue 
+        height 80px 
+        width 80px
+        padding .5em
+        border-radius .5em 0 0 .5em
+        >p 
+            line-height 65px
+            display block 
+            font-size 64px
+            text-align center
+        >img 
+            border 1px solid white
+           
+            overflow hidden
+            border-radius 50%
+            width 64px
+            height 64px
+            display block
+            margin .5em auto
+            transition all 0.3s ease
+            box-shadow 1px 1px 5px white
+            &:hover
+                box-shadow 1px 1px 5px gold
+                border 1px solid gold
+                transform scale(1.2) rotate(360deg)
+            
+    >iframe 
+        
+        width 340px
+        height 500px
+        border none
+        overflow hidden
+
+@media (min-width: 576px)
+    #wrapper_fans_page
+        right -340px

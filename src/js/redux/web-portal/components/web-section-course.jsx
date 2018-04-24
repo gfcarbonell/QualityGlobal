@@ -70,7 +70,7 @@ class WebSectionCourse extends React.Component {
                             </h3>
                             
                         </div>
-                        <div className="row">
+                        <div className="row ">
                             <div className="col s12 m6 l6">
                                 <div className="">
                                     <h5 className="center-align">
